@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^4.0.1",
+    "mongoose": "^5.9.7"
   },
   "description": "![image](./public/image/restaurant_list_image.jpg)",
   "devDependencies": {
