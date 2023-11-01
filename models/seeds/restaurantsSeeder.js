@@ -3,7 +3,7 @@ const Restaurant = require("../restaurants");
 const restaurantList = require("../../restaurant.json").results;
 
 if (process.env.NODE_ENV !== "production") {
-  require("dotenv"), config();
+  require("dotenv").config();
 }
 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -19,7 +19,7 @@ db.on("error", () => {
 
 db.once("open", () => {
   console.log("mongoDB connected");
-  
+
   Restaurant.create(restaurantList)
     .then(() => {
       console.log("run seed");
